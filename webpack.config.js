@@ -6,7 +6,6 @@ module.exports = {
     mode: "development",
     entry: {
         app: './src/index.js',
-        print: './src/print.js'
     },
     output: {
         filename: '[name].bundle.js',
@@ -31,7 +30,8 @@ module.exports = {
     },
     devtool: "eval-source-map",
     devServer: {
-        contentBase: './dist'
+        contentBase: './dist',
+        hot: true
     },
     plugins: [
         new CleanWebpackPlugin(),
